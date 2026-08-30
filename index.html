@@ -292,7 +292,7 @@
     text-transform:uppercase; color:var(--ice-dim); background:rgba(234,243,245,0.02);
   }
   .muted-line{
-    color:var(--ice-dim); font-size:1rem; line-height:1.7;
+    color:var(--ice-dim); font-size:0.98rem; line-height:1.7;
   }
   .method-grid{
     display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:20px;
@@ -301,67 +301,72 @@
   @media (max-width:560px){ .method-grid{grid-template-columns:1fr;} }
   .method-card{
     background:rgba(234,243,245,0.04); border:1px solid var(--line);
-    border-top:3px solid var(--amber); padding:22px 18px 20px; min-height:230px;
+    border-top:3px solid var(--amber); padding:20px 18px 18px; min-height:220px;
   }
   .method-number{
-    font-family:'IBM Plex Mono', monospace; font-size:2rem; font-weight:700; color:var(--amber);
+    font-family:'IBM Plex Mono', monospace; font-size:1.6rem; font-weight:700; color:var(--amber);
     margin-bottom:8px;
   }
   .method-card h3{
-    font-size:1.6rem; font-weight:600; color:var(--ice); margin-bottom:12px;
+    font-size:1.2rem; font-weight:600; color:var(--ice); margin-bottom:10px;
   }
-  .method-card p{ color:var(--ice-dim); font-size:0.95rem; line-height:1.7; }
+  .method-card p{ color:var(--ice-dim); font-size:0.92rem; line-height:1.6; }
   .result-callout{
-    margin-top:28px; padding:18px 20px; border:1px solid var(--line);
+    margin-top:24px; padding:16px 18px; border:1px solid var(--line);
     background:rgba(127,212,217,0.04); color:var(--ice);
-    font-size:1.05rem; line-height:1.6;
+    font-size:0.98rem; line-height:1.6;
   }
   .damage-regimes{ display:grid; gap:18px; }
   .damage-card{
     border:1px solid var(--line); background:rgba(234,243,245,0.04);
-    padding:24px 26px; display:grid; grid-template-columns: 260px 1fr; gap:20px; align-items:start;
+    padding:22px 24px; display:grid; grid-template-columns: 240px 1fr; gap:18px; align-items:start;
   }
   @media (max-width:800px){ .damage-card{grid-template-columns:1fr;} }
   .damage-title{
-    font-size:2rem; font-weight:700; letter-spacing:-0.04em; color:var(--ice);
+    font-size:1.6rem; font-weight:700; letter-spacing:-0.04em; color:var(--ice);
     margin-bottom:8px;
   }
-  .damage-sub{ color:var(--ice-dim); font-size:0.9rem; margin-bottom:16px; }
+  .damage-sub{ color:var(--ice-dim); font-size:0.85rem; margin-bottom:14px; }
   .damage-metric{
-    font-family:'IBM Plex Mono', monospace; font-size:2.1rem; color:var(--amber);
+    font-family:'IBM Plex Mono', monospace; font-size:1.8rem; color:var(--amber);
     font-weight:700; margin-bottom:8px;
   }
   .damage-metric span{ font-size:0.8rem; color:var(--ice-dim); padding-left:8px; }
-  .damage-card p{ color:var(--ice-dim); font-size:0.98rem; line-height:1.7; }
-  .muted-note{ color:var(--ice-dim); font-size:0.98rem; }
+  .damage-card p{ color:var(--ice-dim); font-size:0.92rem; line-height:1.6; }
+  .muted-note{ color:var(--ice-dim); font-size:0.9rem; }
 
   .impact-table-wrap{
     overflow-x:auto; border:1px solid var(--line); background:rgba(234,243,245,0.03);
+    max-width:960px; margin:18px auto 0;
   }
   .impact-table{
-    width:100%; border-collapse:collapse; min-width:760px; color:var(--ice);
+    width:100%; border-collapse:collapse; min-width:720px; color:var(--ice);
+    font-size:0.92rem;
   }
   .impact-table th, .impact-table td{
-    padding:14px 16px; border:1px solid var(--line); text-align:left; vertical-align:top;
+    padding:10px 12px; border:1px solid var(--line); text-align:left; vertical-align:top;
   }
   .impact-table thead th{
     background: rgba(127,212,217,0.08); color:var(--ice); font-weight:600;
-    font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:11px;
+    font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:10.5px;
   }
   .impact-table tbody tr:nth-child(odd){ background:rgba(234,243,245,0.02); }
   .impact-table tbody tr:nth-child(even){ background:rgba(255,255,255,0.01); }
   .impact-table .total-row{ background:rgba(127,212,217,0.08); font-weight:700; }
 
+  .site-gallery h3.gallery-kicker{
+    font-size:1.8rem; letter-spacing:-0.04em; margin:0 0 18px; color:var(--ice);
+  }
   .site-compare{ margin-top:22px; }
   .site-heading-row{
     display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
     margin-bottom:18px;
   }
   .site-heading-row h3{
-    font-size:2.1rem; line-height:1.15; letter-spacing:-0.04em; color:var(--ice); margin:0;
+    font-size:1.6rem; line-height:1.2; letter-spacing:-0.04em; color:var(--ice); margin:0;
   }
   .site-heading-row span{
-    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase;
     color:var(--ice-dim);
   }
   .compare-grid{
@@ -373,7 +378,7 @@
   }
   .compare-label{
     padding:12px 16px; color:var(--ice-dim); font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.08em; font-size:11px; text-transform:uppercase; border-bottom:1px solid var(--line);
+    letter-spacing:0.08em; font-size:10.5px; text-transform:uppercase; border-bottom:1px solid var(--line);
   }
   .compare-image{
     height:330px; border-bottom:1px solid var(--line); background-size:cover; background-position:center; }
@@ -540,10 +545,15 @@
   <section class="assessment" style="padding:96px 0 48px;">
     <div class="section-header">
       <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-        <h2 class="phase-title" style="margin:0;">Post-disaster preliminary assessment</h2>
+        <h2 class="phase-title" style="margin:0;">Preliminary Post-Event Assessment</h2>
       </div>
       <span class="meta-tag">SUMMARY &middot; SITES 01&ndash;14</span>
     </div>
+
+    <p class="muted-line" style="margin-top:18px; max-width:72ch;">
+      The sections above were built entirely from pre-event imagery &mdash; an attempt to read the collapse from the terrain that preceded it. This section turns to what post-event observation actually shows, and where the reconstruction held up against it.<br><br>
+      High-resolution pre- and post-event imagery was released under CC BY-NC 4.0 through the Vantor Open Data Program following a request from the Humanitarian OpenStreetMap Team, alongside a Copernicus Emergency Management Service rapid mapping activation (EMSR927) covering four areas of interest.
+    </p>
 
     <div class="impact-table-wrap" style="margin-top:24px;">
       <table class="impact-table">
@@ -617,9 +627,9 @@
   <section class="storyline" style="padding:22px 0 84px;">
     <div class="section-header">
       <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-        <h2 class="phase-title" style="margin:0;">Corridor storyline: upstream to downstream</h2>
+        <h2 class="phase-title" style="margin:0;">Reviewing upstream to downstream corridor</h2>
       </div>
-      <span class="meta-tag">NARRATIVE &middot; SITES 01&ndash;14</span>
+      <span class="meta-tag">REVIEWING &middot; SITES 01&ndash;14</span>
     </div>
 
     <p class="muted-line" style="margin-top:18px;">Three distinct damage regimes emerge along the ~40 km assessed reach.</p>
@@ -649,6 +659,7 @@
   </section>
 
   <section class="site-gallery" style="padding:0 0 90px;">
+    <h3 class="gallery-kicker">Initial findings from Satellite imagery</h3>
     <div class="site-compare">
       <div class="site-heading-row">
         <h3>Nepal&ndash;China border checkpoint &amp; Friendship bridge</h3>
