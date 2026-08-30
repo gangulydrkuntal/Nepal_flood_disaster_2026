@@ -281,6 +281,119 @@
   footer a{color:var(--cyan); text-decoration:none;}
   h3.sub{font-size:1.05rem; font-weight:600; margin-bottom:6px; color:var(--ice);}
   .kicker{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); margin-bottom:14px; display:block;}
+
+  .section-header{
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    border-bottom:2px solid var(--amber); padding-bottom:12px;
+  }
+  .meta-tag{
+    display:inline-block; padding:6px 10px; border:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--ice-dim); background:rgba(234,243,245,0.02);
+  }
+  .muted-line{
+    color:var(--ice-dim); font-size:1rem; line-height:1.7;
+  }
+  .method-grid{
+    display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:20px;
+  }
+  @media (max-width:880px){ .method-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:560px){ .method-grid{grid-template-columns:1fr;} }
+  .method-card{
+    background:rgba(234,243,245,0.04); border:1px solid var(--line);
+    border-top:3px solid var(--amber); padding:22px 18px 20px; min-height:230px;
+  }
+  .method-number{
+    font-family:'IBM Plex Mono', monospace; font-size:2rem; font-weight:700; color:var(--amber);
+    margin-bottom:8px;
+  }
+  .method-card h3{
+    font-size:1.6rem; font-weight:600; color:var(--ice); margin-bottom:12px;
+  }
+  .method-card p{ color:var(--ice-dim); font-size:0.95rem; line-height:1.7; }
+  .result-callout{
+    margin-top:28px; padding:18px 20px; border:1px solid var(--line);
+    background:rgba(127,212,217,0.04); color:var(--ice);
+    font-size:1.05rem; line-height:1.6;
+  }
+  .damage-regimes{ display:grid; gap:18px; }
+  .damage-card{
+    border:1px solid var(--line); background:rgba(234,243,245,0.04);
+    padding:24px 26px; display:grid; grid-template-columns: 260px 1fr; gap:20px; align-items:start;
+  }
+  @media (max-width:800px){ .damage-card{grid-template-columns:1fr;} }
+  .damage-title{
+    font-size:2rem; font-weight:700; letter-spacing:-0.04em; color:var(--ice);
+    margin-bottom:8px;
+  }
+  .damage-sub{ color:var(--ice-dim); font-size:0.9rem; margin-bottom:16px; }
+  .damage-metric{
+    font-family:'IBM Plex Mono', monospace; font-size:2.1rem; color:var(--amber);
+    font-weight:700; margin-bottom:8px;
+  }
+  .damage-metric span{ font-size:0.8rem; color:var(--ice-dim); padding-left:8px; }
+  .damage-card p{ color:var(--ice-dim); font-size:0.98rem; line-height:1.7; }
+  .muted-note{ color:var(--ice-dim); font-size:0.98rem; }
+
+  .impact-table-wrap{
+    overflow-x:auto; border:1px solid var(--line); background:rgba(234,243,245,0.03);
+  }
+  .impact-table{
+    width:100%; border-collapse:collapse; min-width:760px; color:var(--ice);
+  }
+  .impact-table th, .impact-table td{
+    padding:14px 16px; border:1px solid var(--line); text-align:left; vertical-align:top;
+  }
+  .impact-table thead th{
+    background: rgba(127,212,217,0.08); color:var(--ice); font-weight:600;
+    font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:11px;
+  }
+  .impact-table tbody tr:nth-child(odd){ background:rgba(234,243,245,0.02); }
+  .impact-table tbody tr:nth-child(even){ background:rgba(255,255,255,0.01); }
+  .impact-table .total-row{ background:rgba(127,212,217,0.08); font-weight:700; }
+
+  .site-compare{ margin-top:22px; }
+  .site-heading-row{
+    display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  .site-heading-row h3{
+    font-size:2.1rem; line-height:1.15; letter-spacing:-0.04em; color:var(--ice); margin:0;
+  }
+  .site-heading-row span{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--ice-dim);
+  }
+  .compare-grid{
+    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px; margin-bottom:14px;
+  }
+  @media (max-width:800px){ .compare-grid{grid-template-columns:1fr;} }
+  .compare-panel{
+    border:1px solid var(--line); background:rgba(234,243,245,0.02);
+  }
+  .compare-label{
+    padding:12px 16px; color:var(--ice-dim); font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.08em; font-size:11px; text-transform:uppercase; border-bottom:1px solid var(--line);
+  }
+  .compare-image{
+    height:330px; border-bottom:1px solid var(--line); background-size:cover; background-position:center; }
+  .compare-placeholder.before{
+    background:
+      linear-gradient(135deg, rgba(94,114,123,0.18), rgba(21,36,46,0.5)),
+      linear-gradient(145deg, #c8d3ca, #8ea2a1 40%, #586d5e 100%);
+  }
+  .compare-placeholder.after{
+    background:
+      linear-gradient(135deg, rgba(156,159,155,0.28), rgba(36,40,41,0.42)),
+      linear-gradient(145deg, #d8d7d0, #a4b1a0 40%, #8c8b84 100%);
+  }
+  .coord-line{
+    padding:12px 16px 14px; font-size:0.95rem; color:var(--ice-dim);
+  }
+  .site-total{
+    display:inline-block; background:var(--amber); color:var(--ink); font-weight:700; padding:18px 24px;
+    font-size:1.1rem; letter-spacing:-0.02em; border-radius:0;
+  }
 </style>
 </head>
 <body>
@@ -424,9 +537,242 @@
     </div>
   </section>
 
+  <section class="assessment" style="padding:96px 0 48px;">
+    <div class="section-header">
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <h2 class="phase-title" style="margin:0;">Post-disaster preliminary assessment</h2>
+      </div>
+      <span class="meta-tag">SUMMARY &middot; SITES 01&ndash;14</span>
+    </div>
+
+    <div class="impact-table-wrap" style="margin-top:24px;">
+      <table class="impact-table">
+        <thead>
+          <tr>
+            <th>Site no</th>
+            <th>Location / reference</th>
+            <th>Coordinates (lon, lat)</th>
+            <th>Buildings impacted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Nepal&ndash;China border checkpoint / Friendship bridge</td><td>85.373246, 28.279023</td><td>4</td></tr>
+          <tr><td>2</td><td>Under-construction hydel power</td><td>85.383454, 28.270078</td><td>4</td></tr>
+          <tr><td>3</td><td>NH 42 / hotels</td><td>85.369428, 28.263850</td><td>69</td></tr>
+          <tr><td>4</td><td>Settlements</td><td>85.360750, 28.254730</td><td>342</td></tr>
+          <tr><td>5</td><td>Bridge</td><td>85.357040, 28.232660</td><td>52</td></tr>
+          <tr><td>6</td><td>Bridge</td><td>85.338751, 28.181758</td><td>20</td></tr>
+          <tr><td>7</td><td>Syaprhu Besi &ndash; bridges, hydroelectric power</td><td>85.334549, 28.162425</td><td>208</td></tr>
+          <tr><td>8</td><td>Settlement</td><td>85.318565, 28.146289</td><td>3</td></tr>
+          <tr><td>9</td><td>Under-construction site</td><td>85.295671, 28.125165</td><td>10</td></tr>
+          <tr><td>10</td><td>Settlement</td><td>85.271550, 28.118660</td><td>15</td></tr>
+          <tr><td>11</td><td>Betrawati</td><td>85.182200, 27.967380</td><td>367</td></tr>
+          <tr><td>12</td><td>Trishuli hydel power / settlements</td><td>85.165355, 27.961619</td><td>87</td></tr>
+          <tr><td>13</td><td>Bridge</td><td>85.160931, 27.947927</td><td>9</td></tr>
+          <tr><td>14</td><td>Nuwakot</td><td>85.145620, 27.929270</td><td>127</td></tr>
+          <tr class="total-row"><td colspan="3">Total</td><td>1317</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="methodology" style="padding:32px 0 84px;">
+    <div class="section-header">
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <h2 class="phase-title" style="margin:0;">How this analysis was built</h2>
+      </div>
+      <span class="meta-tag">METHOD &middot; BHOTE KOSHI &ndash; TRISHULI CORRIDOR</span>
+    </div>
+
+    <p class="muted-line" style="margin-top:22px;">Observation is bounded by what the public imagery could see &mdash; cloud cover, not damage, sets the limits of this dataset.</p>
+
+    <div class="method-grid" style="margin-top:32px;">
+      <div class="method-card">
+        <div class="method-number">01</div>
+        <h3>Imagery availability</h3>
+        <p>Public post-disaster high-resolution imagery released for the affected districts was catalogued (slide 12) to establish what could actually be observed.</p>
+      </div>
+      <div class="method-card">
+        <div class="method-number">02</div>
+        <h3>Cloud-free screening</h3>
+        <p>Every candidate scene along the Bhote Koshi and Trishuli was checked and only cloud-free footprints were retained as valid observation windows.</p>
+      </div>
+      <div class="method-card">
+        <div class="method-number">03</div>
+        <h3>Before / after pairing</h3>
+        <p>Each usable location was paired with a February 2026 baseline scene and its 27&ndash;28 August 2026 post-event counterpart at matched scale.</p>
+      </div>
+      <div class="method-card">
+        <div class="method-number">04</div>
+        <h3>Building-level counting</h3>
+        <p>Structures within the flood- and debris-affected extent were counted per site and geo-referenced to a single coordinate.</p>
+      </div>
+    </div>
+
+    <div class="result-callout">
+      Result: 14 cloud-free locations across ~40 km of the corridor, from the Nepal&ndash;China border down to Nuwakot, with 1,317 buildings assessed as impacted.
+    </div>
+  </section>
+
+  <section class="storyline" style="padding:22px 0 84px;">
+    <div class="section-header">
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <h2 class="phase-title" style="margin:0;">Corridor storyline: upstream to downstream</h2>
+      </div>
+      <span class="meta-tag">NARRATIVE &middot; SITES 01&ndash;14</span>
+    </div>
+
+    <p class="muted-line" style="margin-top:18px;">Three distinct damage regimes emerge along the ~40 km assessed reach.</p>
+
+    <div class="damage-regimes" style="margin-top:28px;">
+      <div class="damage-card">
+        <div class="damage-title">Upper Bhote Koshi</div>
+        <div class="damage-sub">Sites 01&ndash;07 &middot; border to Syapru Besi</div>
+        <div class="damage-metric">699 buildings <span>53% of total</span></div>
+        <p>The surge enters at the Nepal&ndash;China border, taking out the checkpoint approach and an under-construction hydel site with limited built-up loss, then intensifies along NH 42 where roadside hotels, dense settlement (342 buildings) and two bridges are stripped out. Syapru Besi is the first townships-scale loss at 208 buildings.</p>
+      </div>
+      <div class="damage-card">
+        <div class="damage-title">Mid corridor</div>
+        <div class="damage-sub">Sites 08&ndash;10 &middot; confluence reach</div>
+        <div class="damage-metric">28 buildings <span>2% of total</span></div>
+        <p>Through the narrow confluence reach, the valley is steep and sparsely built. Damage drops to a handful of riverside structures and an under-construction site &mdash; the flood is destructive but there is little in its path.</p>
+      </div>
+      <div class="damage-card">
+        <div class="damage-title">Lower Trishuli</div>
+        <div class="damage-sub">Sites 11&ndash;14 &middot; Betrawati to Nuwakot</div>
+        <div class="damage-metric">590 buildings <span>45% of total</span></div>
+        <p>Where the valley widens, the river spreads across settled floodplain. Betrawati is the single worst-hit location at 367 buildings, followed by the Trishuli dam settlements and Nuwakot, with a bridge crossing lost in between.</p>
+      </div>
+    </div>
+
+    <p class="muted-note" style="margin-top:22px;">Counts are conservative &mdash; cloud-obscured stretches could not be assessed.</p>
+  </section>
+
+  <section class="site-gallery" style="padding:0 0 90px;">
+    <div class="site-compare">
+      <div class="site-heading-row">
+        <h3>Nepal&ndash;China border checkpoint &amp; Friendship bridge</h3>
+        <span>SITE 01 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.373246, 28.279023</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.373246, 28.279023</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 4</div>
+    </div>
+
+    <div class="site-compare" style="margin-top:52px;">
+      <div class="site-heading-row">
+        <h3>Under-construction hydel power project</h3>
+        <span>SITE 02 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.383454, 28.270078</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.378944, 28.271938</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 4</div>
+    </div>
+
+    <div class="site-compare" style="margin-top:52px;">
+      <div class="site-heading-row">
+        <h3>NH 42 corridor and roadside hotels</h3>
+        <span>SITE 03 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.369428, 28.263850</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.369455, 28.263905</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 69</div>
+    </div>
+
+    <div class="site-compare" style="margin-top:52px;">
+      <div class="site-heading-row">
+        <h3>Riverside settlements</h3>
+        <span>SITE 04 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.360750, 28.254730</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.36594, 28.25116</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 342</div>
+    </div>
+
+    <div class="site-compare" style="margin-top:52px;">
+      <div class="site-heading-row">
+        <h3>River bridge crossing</h3>
+        <span>SITE 05 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.357040, 28.232660</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.35465, 28.24053</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 52</div>
+    </div>
+
+    <div class="site-compare" style="margin-top:52px;">
+      <div class="site-heading-row">
+        <h3>Syapru Besi township</h3>
+        <span>SITE 07 &middot; BEFORE / AFTER</span>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-panel">
+          <div class="compare-label">Feb, 2026</div>
+          <div class="compare-image compare-placeholder before"></div>
+          <div class="coord-line">Coordinates: 85.334549, 28.162425</div>
+        </div>
+        <div class="compare-panel">
+          <div class="compare-label">27th Aug, 2026</div>
+          <div class="compare-image compare-placeholder after"></div>
+          <div class="coord-line">Coordinates: 85.333900, 28.160788</div>
+        </div>
+      </div>
+      <div class="site-total">Buildings impacted: 208</div>
+    </div>
+  </section>
+
   <footer>
     <h3 class="sub" style="font-family:'Space Grotesk',sans-serif;">Langtang Lirung Glacier Collapse &mdash; Geospatial Reconstruction</h3>
-    <p style="margin-top:2px;">By Kuntal Ganguly</p>
+    <p style="margin-top:2px;">By Dr. Kuntal Ganguly</p>
     <p style="margin-top:16px;"><strong style="color:var(--ice-dim);">Data source and disclaimer.</strong> This study is based on pre-disaster and publicly available geospatial sources, including Google Earth, Vantor imagery, Google Image Service, OpenStreetMap building datasets, and the OpenStreetMap Wiki entry on the 2026 Nepal floods: <a href="https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Nepal_Floods_2026" target="_blank" rel="noopener noreferrer">https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Nepal_Floods_2026</a>. Distances, elevations, and geomorphic interpretations were derived from manual measurement and visual cross-checks using Google Earth and associated imagery products. This is a reconnaissance analysis intended for informational and research use, not an official engineering, hydrological, or legal assessment.</p>
     <p style="margin-top:12px;"><strong style="color:var(--ice-dim);">Source attribution.</strong> OpenStreetMap building data; OpenStreetMap Wiki; Google Earth; Vantor imagery; Google Image Service; OpenStreetMap Nepal Floods 2026 activity page.</p>
   </footer>
