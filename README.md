@@ -1,5 +1,7 @@
 # Nepal Floods 2026 — Geospatial Reconstruction
 
+**Live site:** [gangulydrkuntal.github.io/Nepal_flood_disaster_2026](https://gangulydrkuntal.github.io/Nepal_flood_disaster_2026/)
+
 A geospatial reconstruction of the August 2026 Nepal floods and Langtang Lirung glacier collapse, combining pre-event terrain analysis with post-disaster imagery observations. Documents damage extent across 14 sites from the Nepal-China border to Nuwakot.
 
 ## Contents
